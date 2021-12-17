@@ -1,3 +1,4 @@
+import { ValidationFieldsService } from './../../../../shared/services/validation-fields.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
@@ -11,14 +12,15 @@ export class SignUpComponent implements OnInit {
   signupForm: FormGroup;
 
   constructor(
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    public validation: ValidationFieldsService,
   ) {
     this.signupForm = this.fb.group({
-      username: ['', Validators.compose([Validators.minLength(2), Validators.required]) ],
+      username: ['', Validators.compose([Validators.minLength(2), Validators.maxLength(25), Validators.required]) ],
       email: ['',  Validators.compose([Validators.email, Validators.required])],
       password: ['', Validators.compose([Validators.required, Validators.minLength(6)])]
     })
-    this.signupForm.controls['username'].valueChanges.subscribe( (value) => console.log(value))
+    // this.signupForm.controls['username'].valueChanges.subscribe( (value) => console.log(value))
   }
 
   ngOnInit(): void {
