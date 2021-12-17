@@ -1,3 +1,4 @@
+import { AngularMaterialModule } from './../../angular-material/angular-material.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -9,11 +10,12 @@ import { SignUpComponent } from './pages/sign-up/sign-up.component';
 @NgModule({
   declarations: [
     RegisterComponent,
-    SignUpComponent
+    SignUpComponent,
   ],
   imports: [
     CommonModule,
-    RegisterRoutingModule
+    RegisterRoutingModule,
+    AngularMaterialModule
   ]
 })
 export class RegisterModule { }

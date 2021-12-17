@@ -1,1 +1,56 @@
-<p>sign-up works!</p>
+<section class="signUp-wrapper d-flex justify-content-center align-items-center h-100">
+  <div class="container">
+    <div class="row signup-bg mx-2 mx-sm-4">
+      <div class="d-none col-md-5 d-md-block p-0">
+        <div class="image">
+          <img src="https://images.unsplash.com/photo-1639565770091-55e1de87e749?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80 987w" alt="technology">
+        </div>
+      </div>
+
+      <div class="col-10 col-sm-10 col-md-5 mx-auto mt-3 mt-sm-3">
+
+        <h1 class="mt-3 title">Welcome to <span>Big Software</span></h1>
+        <p class="mt-3">I'm always one step ahead!</p>
+
+        <div class="form mt-3">
+          <form>
+            <div class="form-group row">
+              <mat-form-field appearance="outline">
+                <mat-label>Username</mat-label>
+                <input matInput type="text" placeholder="Deletking">
+                <mat-error>Campo obrigatório. *</mat-error>
+              </mat-form-field>
+            </div>
+
+            <div class="form-group row">
+              <mat-form-field appearance="outline">
+                <mat-label>E-mail</mat-label>
+                <input matInput type="email" placeholder="deletkingdelet@gmail.com">
+                <mat-error>Campo obrigatório. *</mat-error>
+              </mat-form-field>
+            </div>
+
+            <div class="form-group row">
+              <mat-form-field appearance="outline">
+                <mat-label>Password</mat-label>
+                <input matInput [type]="hide ? 'password' : 'text'" placeholder="M@ng@V3rd3">
+                <div mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                  <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </div>
+                <mat-error>Campo obrigatório. *</mat-error>
+                <mat-hint>Senha deve conter caractéres especiais.</mat-hint>
+              </mat-form-field>
+            </div>
+
+            <div class="box-button mt-4">
+              <button
+                class="btn primary-button d-block flex-grow-1 mb-5"
+              >Register</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

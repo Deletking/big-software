@@ -1,0 +1,14 @@
+.signUp-wrapper {
+  background-image: linear-gradient(to right, #639bee , #2377f9);
+  .signup-bg {
+    background-color: #FFFFFF;
+    border-radius: 20px;
+  }
+  .image {
+    overflow: hidden;
+    img {
+      border-radius: 20px 0 0 20px;
+      height: calc(100vh - 100px);
+    }
+  }
+}

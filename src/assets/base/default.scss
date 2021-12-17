@@ -1,0 +1,22 @@
+.title  {
+  font-size: 2em;
+  span {
+    color: #116df8;
+    font-weight: 500;
+  }
+}
+
+.primary-button {
+  background-image: linear-gradient(to right, #84b4fc , #116df8);
+  padding: 5px 30px;
+  color: #FFFFFF;
+  transition: 1s ease-out;
+
+  &:hover {
+    background-image: linear-gradient(to right, #307df0 , #0263f5);
+    color: #FFFFFF;
+  }
+  &:disabled {
+    opacity: 0.3;
+  }
+}

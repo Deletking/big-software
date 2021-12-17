@@ -71,9 +71,9 @@ const mm = [
 ]
 
 @NgModule({
-  declarations: [mm],
   imports: [
-    CommonModule
+    CommonModule,
+    mm
   ],
   exports: [mm]
 })
