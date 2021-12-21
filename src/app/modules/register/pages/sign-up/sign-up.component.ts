@@ -12,8 +12,7 @@ export class SignUpComponent implements OnInit {
   signupForm: FormGroup;
 
   constructor(
-    private fb: FormBuilder,
-    public validation: ValidationFieldsService,
+    private fb: FormBuilder
   ) {
     this.signupForm = this.fb.group({
       username: ['', Validators.compose([Validators.minLength(2), Validators.maxLength(25), Validators.required]) ],
@@ -26,6 +25,9 @@ export class SignUpComponent implements OnInit {
   }
 
   onSubmit(): void {
-     console.log(this.signupForm.value);
+    if(this.signupForm.invalid) {
+      return;
+    }
+    console.log(this.signupForm.value);
   }
 }
