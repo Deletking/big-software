@@ -2,11 +2,11 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AngularMaterialModule } from './../angular-material/angular-material.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { InputTextComponent } from './components/fields/input-text/input-text.component';
-
+import { InputTextComponent, InputPasswordComponent } from './components/fields';
 @NgModule({
   declarations: [
-    InputTextComponent
+    InputTextComponent,
+    InputPasswordComponent
   ],
   imports: [
     CommonModule,
@@ -14,7 +14,8 @@ import { InputTextComponent } from './components/fields/input-text/input-text.co
     ReactiveFormsModule
   ],
   exports: [
-    InputTextComponent
+    InputTextComponent,
+    InputPasswordComponent
   ]
 })
 export class SharedModule { }

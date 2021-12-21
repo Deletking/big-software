@@ -13,7 +13,7 @@
         <p class="mt-3">I'm always one step ahead!</p>
 
         <div class="form mt-3">
-          <form [formGroup]="signupForm">
+          <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
             <div class="form-group row">
               <app-input-text title="Username" controlName="username" [formGroup]="signupForm"></app-input-text>
             </div>
@@ -23,21 +23,13 @@
             </div>
 
             <div class="form-group row">
-              <mat-form-field appearance="outline">
-                <mat-label>Password</mat-label>
-                <input matInput [type]="hide ? 'password' : 'text'" placeholder="M@ng@V3rd3" formControlName="password">
-                <div mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-                  <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                </div>
-                <mat-error>Campo obrigatório. *</mat-error>
-                <mat-hint>Senha deve conter caractéres especiais.</mat-hint>
-              </mat-form-field>
+              <app-input-password title="Password" controlName="password" [formGroup]="signupForm"></app-input-password>
             </div>
 
             <div class="box-button mt-4">
               <button
-                class="btn primary-button d-block flex-grow-1 mb-5"
-              >Register</button>
+                [disabled]="signupForm.invalid"
+                class="btn primary-button d-block flex-grow-1 mb-5" type="submit">Register</button>
             </div>
           </form>
         </div>
