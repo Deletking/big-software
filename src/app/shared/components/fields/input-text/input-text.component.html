@@ -1,11 +1,12 @@
 <div [formGroup]="formGroup">
-  <mat-form-field class="full-width">
+  <mat-form-field appearance="outline">
       <input matInput
               [placeholder]="title"
               [name]="controlName"
               [formControlName]="controlName">
-      <mat-error *ngIf="validation.hasErrorValidate(formControl, 'required')" >Campo obrigatório.</mat-error>
-      <mat-error *ngIf="validation.hasErrorValidate(formControl, 'minlength')" >Campo precisa ter no mínimo {{ validacao.lengthValidar(formControl, 'minlength')}} caracteres.</mat-error>
-      <mat-error *ngIf="validation.hasErrorValidate(formControl, 'maxlength')" >Campo pode ter no máximo {{ validacao.lengthValidar(formControl, 'maxlength')}} caracteres.</mat-error>
+      <mat-error *ngIf="validation.hasErrorValidate(formControl, 'required')" >{{title}} is required.</mat-error>
+      <mat-error *ngIf="validation.hasErrorValidate(formControl, 'minlength')" >Field must be at least {{ validation.lengthValidar(formControl, 'minlength')}} characters.</mat-error>
+      <mat-error *ngIf="validation.hasErrorValidate(formControl, 'maxlength')" >Field must not exceed {{ validation.lengthValidar(formControl, 'maxlength')}} characters.</mat-error>
+      <mat-error *ngIf="validation.hasErrorValidate(formControl, 'email')" >E-mail is invalid.</mat-error>
     </mat-form-field>
 </div>

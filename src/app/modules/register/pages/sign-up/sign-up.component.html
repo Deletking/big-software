@@ -15,21 +15,11 @@
         <div class="form mt-3">
           <form [formGroup]="signupForm">
             <div class="form-group row">
-              <mat-form-field appearance="outline">
-                <mat-label>Username</mat-label>
-                <input matInput type="text" placeholder="Deletking" formControlName="username">
-                <mat-error *ngIf="validation.hasErrorValidate(signupForm.controls['username'], 'required')" >Campo obrigatório.</mat-error>
-                <mat-error *ngIf="validation.hasErrorValidate(signupForm.controls['username'], 'minlength')" >Campo precisa ter no mínimo {{ validation.lengthValidar(signupForm.controls['username'], 'minlength')}} caracteres.</mat-error>
-                <mat-error *ngIf="validation.hasErrorValidate(signupForm.controls['username'], 'maxlength')" >Campo pode ter no máximo {{ validation.lengthValidar(signupForm.controls['username'], 'maxlength')}} caracteres.</mat-error>
-              </mat-form-field>
+              <app-input-text title="Username" controlName="username" [formGroup]="signupForm"></app-input-text>
             </div>
 
             <div class="form-group row">
-              <mat-form-field appearance="outline">
-                <mat-label>E-mail</mat-label>
-                <input matInput type="email" placeholder="deletkingdelet@gmail.com" formControlName="email">
-                <mat-error>Campo obrigatório. *</mat-error>
-              </mat-form-field>
+              <app-input-text title="E-mail" controlName="email" [formGroup]="signupForm"></app-input-text>
             </div>
 
             <div class="form-group row">

@@ -1,3 +1,4 @@
+import { SharedModule } from './../../shared/shared.module';
 import { AngularMaterialModule } from './../../angular-material/angular-material.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -18,6 +19,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     RegisterRoutingModule,
     AngularMaterialModule,
     ReactiveFormsModule,
+    SharedModule,
   ]
 })
 export class RegisterModule { }
