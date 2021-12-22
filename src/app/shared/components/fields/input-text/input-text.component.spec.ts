@@ -1,13 +1,15 @@
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { InputTextComponent } from './input-text.component';
 
-describe('InputTextComponent', () => {
+fdescribe('InputTextComponent', () => {
   let component: InputTextComponent;
   let fixture: ComponentFixture<InputTextComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [  ],
       declarations: [ InputTextComponent ]
     })
     .compileComponents();

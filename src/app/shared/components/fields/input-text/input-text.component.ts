@@ -15,6 +15,8 @@ export class InputTextComponent {
   constructor(public validation: ValidationFieldsService) { }
 
   get formControl(): AbstractControl {
-    return this.formGroup.controls[this.controlName];
+    if(this.controlName) {
+      return this.formGroup.controls[this.controlName];
+    }
   }
 }
