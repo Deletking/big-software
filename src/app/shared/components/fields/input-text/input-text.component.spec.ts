@@ -1,15 +1,18 @@
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { InputTextComponent } from './input-text.component';
 
-fdescribe('InputTextComponent', () => {
+describe('InputTextComponent', () => {
   let component: InputTextComponent;
   let fixture: ComponentFixture<InputTextComponent>;
+  const formBuilder: FormBuilder = new FormBuilder();
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [  ],
+      imports: [ 
+        ReactiveFormsModule
+       ],
       declarations: [ InputTextComponent ]
     })
     .compileComponents();
@@ -18,6 +21,11 @@ fdescribe('InputTextComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(InputTextComponent);
     component = fixture.componentInstance;
+    component.title = 'Username';
+    component.controlName = 'username'
+    component.formGroup = formBuilder.group({
+      username: ['', Validators.required],
+    });
     fixture.detectChanges();
   });
 
