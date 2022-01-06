@@ -3,7 +3,7 @@
     <div class="row signup-bg mx-2 mx-sm-4">
       <div class="d-none col-md-5 d-md-block p-0">
         <div class="image">
-          <img src="https://images.unsplash.com/photo-1639565770091-55e1de87e749?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80 987w" alt="technology">
+          <img [src]="image" alt="technology">
         </div>
       </div>
 
@@ -30,7 +30,7 @@
               <button
                 [disabled]="signupForm.invalid"
                 id="btn-register"
-                class="btn primary-button d-block flex-grow-1 mb-5" type="submit">Register</button>
+                class="btn primary-button d-block flex-grow-1 my-5" type="submit">Register</button>
             </div>
           </form>
         </div>

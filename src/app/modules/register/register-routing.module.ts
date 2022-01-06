@@ -14,6 +14,11 @@ const routes: Routes = [
       }
     ]
   },
+  {
+    path: '**',
+    pathMatch: 'full',
+    redirectTo: '/register/sign-up'
+  }
 ];
 
 @NgModule({

@@ -10,7 +10,8 @@ import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/fo
 export class SignUpComponent implements OnInit {
   hide = true;
   signupForm: FormGroup;
-
+  image = 'https://images.unsplash.com/photo-1639565770091-55e1de87e749?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80 987w';
+  
   constructor(
     private fb: FormBuilder
   ) {
