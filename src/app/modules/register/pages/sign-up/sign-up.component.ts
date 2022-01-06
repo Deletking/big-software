@@ -15,9 +15,9 @@ export class SignUpComponent implements OnInit {
     private fb: FormBuilder
   ) {
     this.signupForm = this.fb.group({
-      username: ['', Validators.compose([Validators.minLength(2), Validators.maxLength(25), Validators.required]) ],
-      email: ['',  Validators.compose([Validators.email, Validators.required])],
-      password: ['', Validators.compose([Validators.required, Validators.pattern('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}')]) ]
+      username: ['', Validators.compose([ Validators.required, Validators.minLength(2), Validators.maxLength(25) ]) ],
+      email: ['',  Validators.compose([ Validators.required, Validators.email, Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$') ])],
+      password: ['', Validators.compose([Validators.required, Validators.pattern('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}') ]) ]
     })
   }
 
