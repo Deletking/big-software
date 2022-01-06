@@ -24,4 +24,10 @@ describe('SignUpComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it(`Test method onSubmit`, () => {
+    const button = fixture.debugElement.nativeElement.querySelector('#btn-register');
+    expect(button).toBeTruthy();
+    button.click();
+  })
 });
