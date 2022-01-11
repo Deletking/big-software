@@ -1,6 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { FormBuilder, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { ValidationFieldsService } from 'src/app/shared/services/validation-fields.service';
+import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 
 import { InputPasswordComponent } from './input-password.component';
 
@@ -8,7 +7,7 @@ describe('InputPasswordComponent', () => {
   let component: InputPasswordComponent;
   let fixture: ComponentFixture<InputPasswordComponent>;
   const formBuilder: FormBuilder = new FormBuilder();
-  
+
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [  ReactiveFormsModule],
@@ -27,7 +26,7 @@ describe('InputPasswordComponent', () => {
     });
     fixture.detectChanges();
   });
-  
+
   it('should create', () => {
     expect(component).toBeTruthy();
   });

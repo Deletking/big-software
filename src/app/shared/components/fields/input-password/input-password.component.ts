@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { AbstractControl, FormGroup } from '@angular/forms';
-import { ValidationFieldsService } from 'src/app/shared/services/validation-fields.service';
+import { ValidationFieldsService } from '@shared/services/validation-fields.service';
 
 @Component({
   selector: 'app-input-password',

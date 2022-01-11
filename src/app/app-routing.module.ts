@@ -5,7 +5,7 @@ const routes: Routes = [
   {
     path: 'register',
     loadChildren: () =>
-      import('../app/modules/register/register.module').then((m) => m.RegisterModule),
+      import('@modules/register/register.module').then((m) => m.RegisterModule),
   },
   {
     path: '**',
