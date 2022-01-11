@@ -8,7 +8,7 @@
 }
 
 .primary-button {
-  background-image: linear-gradient(to right, #84b4fc , #116df8);
+  background-image: linear-gradient(to right, #307df0 , #116df8);
   padding: 5px 30px;
   color: #FFFFFF;
   transition: 1s ease-out;
@@ -24,4 +24,12 @@
 
 .mat-form-field {
   width: 100%;
+}
+
+
+.mat-progress-spinner circle, .mat-spinner circle {
+  stroke: #FFFFFF;
+}
+.spinner {
+  display: inline-block !important;
 }

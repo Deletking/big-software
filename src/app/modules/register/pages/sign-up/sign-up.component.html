@@ -7,9 +7,9 @@
         </div>
       </div>
 
-      <div class="col-10 col-sm-10 col-md-5 mx-auto mt-3 mt-sm-3">
+      <div class="col-10 col-sm-10 col-md-5 mx-auto d-flex justify-content-center flex-column">
 
-        <h1 class="mt-3 mt-sm-5 title">Welcome to <span>Big Software</span></h1>
+        <h1 class="title">Welcome to <span>Big Software</span></h1>
         <p class="mt-3">I'm always one step ahead!</p>
 
         <div class="form mt-3">
@@ -30,7 +30,7 @@
               <button
                 [disabled]="signupForm.invalid"
                 id="btn-register"
-                class="btn primary-button d-block flex-grow-1 my-5" type="submit">Register</button>
+                class="btn primary-button my-5 d-flex justify-content-center" type="submit">Register <mat-spinner *ngIf="isLoading" class="spinner" diameter="15"></mat-spinner></button>
             </div>
           </form>
         </div>

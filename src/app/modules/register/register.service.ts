@@ -12,7 +12,7 @@ export class RegisterService {
   constructor(private http: HttpClient) { }
 
 
-  registerPost(data: RegisterUser): Observable<any> {
+  registerUser(data: RegisterUser): Observable<any> {
     return this.http.post(`${environment.API_URL}`, data);
   }
 

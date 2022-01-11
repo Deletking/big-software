@@ -11,4 +11,12 @@
       height: calc(100vh - 100px);
     }
   }
+
+  .box-button {
+    button {
+      .spinner {
+        margin: 4px 0 0 12px;
+      }
+    }
+  }
 }
