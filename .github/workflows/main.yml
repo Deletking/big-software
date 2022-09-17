@@ -1,0 +1,23 @@
+name: Start Github Actions
+
+on:
+  push:
+    branches: ["*"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 16
+      - name: install dependencies
+        run: npm install
+      - name: tests
+        run: npm test
+      - name: build
+        run: npm run build:prod
+      - name: deploy to Netlify
+        run: |
+          curl -X POST -d '{}' https://api.netlify.com/build_hooks/2eae8d5c79506d0213a38be0e
