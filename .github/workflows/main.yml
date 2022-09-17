@@ -15,9 +15,5 @@ jobs:
         run: npm install
       - name: build
         run: npm run build:prod
-      - name: deploy to Netlify
-        run: |
-          npm install -g netlify-cli --force
-          netlify deploy --auth=${{ secrets.netlify_auth_token }} --dir dist/big-software --site=${{secrets.netlify_site_id}} --prod
       - name: deploy to AWS
-        run: npx cross-env NG_DEPLOY_AWS_ACCESS_KEY_ID=AKIAXTFHXOLSI56ADMFJ NG_DEPLOY_AWS_SECRET_ACCESS_KEY=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 NG_DEPLOY_AWS_BUCKET=big-software NG_DEPLOY_AWS_REGION=sa-east-1 ng deploy
+        run: npx cross-env NG_DEPLOY_AWS_ACCESS_KEY_ID=AKIAXTFHXOLSFXXYASDF NG_DEPLOY_AWS_SECRET_ACCESS_KEY=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 NG_DEPLOY_AWS_BUCKET=sdfasf NG_DEPLOY_AWS_REGION=sa-east-1 ng deploy
